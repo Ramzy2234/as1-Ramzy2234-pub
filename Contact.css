@@ -1,0 +1,36 @@
+body {
+    background: linear-gradient(to bottom, #333, #777);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+.contact-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 50%;
+}
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.contact-icons a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+.contact-icons a:hover {
+    color: #ccc;
+}
+
+body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 20px; }
+        header { background: #333; color: white; padding: 20px; }
+        nav { margin: 20px 0; }
+        nav ul { list-style: none; padding: 0; }
+        nav ul li { display: inline; margin: 0 15px; }
+        nav a { text-decoration: none; color: #333; font-weight: bold; }
+        section { max-width: 600px; margin: auto; }
