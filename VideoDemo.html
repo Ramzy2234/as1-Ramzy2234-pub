@@ -3,7 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Eyram Kokoti</title>
-    <link rel="stylesheet" href="VideoDemo.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Video Demo - Eyram's Portfolio</title>
+    <link rel="stylesheet" href="main.css" media="screen">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "header header header"
+                "nav nav nav"
+                ". main ."
+                "footer footer footer";
+            background-color: #5C6D70;
+        }
+
+        header {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            grid-area: header;
+        }
+
+        nav {
+            background-color: #ADB6C4;
+            grid-area: nav;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        main {
+            color: white;
+            grid-area: main;
+        }
+
+        section {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        footer {
+            background-color: #ADB6C4;
+            color: white;
+            grid-area: footer;
+            padding: 10px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 100%;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        }
+    </style>
 </head>
+<body>
+    <header>
+        <h1>Video Demonstration</h1>
+        <p></p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="VideoDemo.html">Video Demo</a></li>
+            <li><a href="Report.html">Report</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Project Video</h2>
+            <p>Here's a quick demo of one of my recent networking or cybersecurity-related projects:</p>
+            <video controls>
+                <source src="c:\Users\eyram\Videos\2025-07-11 23-46-33.mkv" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Eyram's Portfolio</p>
+    </footer>
+</body>
+</html>
