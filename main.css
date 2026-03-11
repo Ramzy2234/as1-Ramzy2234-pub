@@ -102,3 +102,10 @@ nav ul li a:hover {
     border-bottom: 0.2em solid white;
     border-radius: 0.2em;
 }
+
+.showNav::before { 
+    content: ''; 
+    position: absolute; 
+    width: 1em; margin: 0.3em 0 0 -0.5em; 
+    border-top: 0.2em solid #fff;
+}
