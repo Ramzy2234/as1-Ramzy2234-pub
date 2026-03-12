@@ -130,8 +130,8 @@ nav {
     background-color: #2c2c2c;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 50%;
+    right: 0;
+    width: 40%;
     height: 100vh;
 }
 
@@ -153,7 +153,14 @@ nav {
 
 #clicked:target .off {
     display: block;
+    border-top: none;
+    border-bottom: none;
+    font-size: 1.4em;
+    color: white;
 }
 
+#clicked:target .off::before {
+    border-top: none;
+}
 nav ul { list-style: none; padding: 0; }
 nav ul li { display: block; margin: 0; padding: 15px; }
