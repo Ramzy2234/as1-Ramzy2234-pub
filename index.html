@@ -1,25 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eyram's Portfolio</title>
     <link rel="stylesheet" href="main.css" media="screen">
 </head>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 20px; }
-        header { background: #333; color: white; padding: 20px; }
-        nav { margin: 20px 0; }
-        nav ul { list-style: none; padding: 0; }
-        nav ul li { display: inline; margin: 0 15px; }
-        nav a { text-decoration: none; color: #333; font-weight: bold; }
-        section { max-width: 600px; margin: auto; }
-    </style>
-<body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+    }
+
+    header {
+        background: #333;
+        color: white;
+        padding: 20px;
+    }
+
+    nav {
+        margin: 20px 0;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    section {
+        max-width: 600px;
+        margin: auto;
+    }
+</style>
+
+<body id="clicked">
     <header>
-        <a href="#" class="showNav"></a>
+        <a href="#clicked" class="on showNav"></a>
+        <a href="#" class="off showNav"></a>
+
         <h1>Hi, it's Eyram</h1>
-        <p>Welcome to my page, nice to meet you. Have a look around at my portfolio and get to know more bout me. Hope you enjoy it!!!</p>
+        <p>Welcome to my page, nice to meet you. Have a look around at my portfolio and get to know more bout me. Hope
+            you enjoy it!!!</p>
     </header>
     <nav>
         <ul>
@@ -33,12 +68,20 @@
     <main>
         <section>
             <h2>About Me</h2>
-            <p>Hello,  I'm Eyram, a driven and interested Computer Network Engineering (BSc) student at the University of Northampton.  I've always been interested by technology, and I'm eager to discover how systems interact and communicate in the digital domain.Along with my education, I've earned experience in hospitality, youth work, and logistics, which has helped me become adaptive, professional, and a good communicator.
-            
-            In my leisure time, I like working on personal technological projects, where I study coding and cybersecurity. I'm currently looking for further experience in computer network engineering, and I'm interested in internships where I can use what I'm learning, expand my skill set, and work on real-world projects.Outside of technology, I'm an avid sports enthusiast, particularly football, which has affected my perspective on collaboration, discipline, and perseverance. I am excited to continue studying and take the next step towards a career in information technology and networking.</p>
+            <p>Hello, I'm Eyram, a driven and interested Computer Network Engineering (BSc) student at the University of
+                Northampton. I've always been interested by technology, and I'm eager to discover how systems interact
+                and communicate in the digital domain.Along with my education, I've earned experience in hospitality,
+                youth work, and logistics, which has helped me become adaptive, professional, and a good communicator.
+
+                In my leisure time, I like working on personal technological projects, where I study coding and
+                cybersecurity. I'm currently looking for further experience in computer network engineering, and I'm
+                interested in internships where I can use what I'm learning, expand my skill set, and work on real-world
+                projects.Outside of technology, I'm an avid sports enthusiast, particularly football, which has affected
+                my perspective on collaboration, discipline, and perseverance. I am excited to continue studying and
+                take the next step towards a career in information technology and networking.</p>
         </section>
     </main>
-    <footer>
+    <footer id="this">
         <a href="https://github.com/Ramzy2234" target="_blank"><i class="fa-brands fa-github">
     </footer>
 </body>
