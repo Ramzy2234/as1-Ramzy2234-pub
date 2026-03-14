@@ -1,39 +1,92 @@
 /* Base dark background and light text */
 body {
-    background-color: #1e1e1e;
-    color: #e0e0e0;
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
+    color: #e0e0e0;
+
+    background: linear-gradient(
+        -45deg,
+        #1e1e1e,
+        #1a1f2b,
+        #162235,
+        #1e1e1e
+    );
+
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
 }
 
-/* Header and footer */
-header,
-footer {
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+a {
+    transition: all 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =================================
+   PAGE LAYOUT
+================================= */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+/* =================================
+   HEADER / HERO SECTION
+================================= */
+
+header {
     background-color: #111;
-    color: #fff;
-    padding: 1rem;
+    color: white;
     text-align: center;
+    padding: 2rem 1rem;
 }
 
-/* Navigation bar */
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    max-width: 700px;
+    margin: auto;
+    color: #ccc;
+}
+
+/* =================================
+   NAVIGATION
+================================= */
+
 nav {
     background-color: #2c2c2c;
     padding: 0.75rem;
     text-align: center;
-    display: block; /* desktop nav visible */
-    width: 100%;
-    height: auto;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
-    flex-direction: row; /* horizontal for desktop */
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
+    list-style: none;
     margin: 0 15px;
     padding: 15px;
 }
@@ -49,7 +102,8 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* alternating sidebar colours (for mobile stacked items) */
+/* alternating nav colours */
+
 nav ul li:nth-child(odd) {
     background-color: #242424;
 }
@@ -58,31 +112,35 @@ nav ul li:nth-child(even) {
     background-color: #2f2f2f;
 }
 
-/* Project layout container */
+/* =================================
+   PROJECT SECTION
+================================= */
+
 .project-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: center;
-    background-color: #2a2a2a;
-    margin: 2rem;
+
+    background-color: rgba(42,42,42,0.95);
+
+    margin: 2rem 0;
     padding: 2rem;
+
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
-/* Image styling */
 .project-image img {
-    width: 100%;
     border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
-/* Description text */
 .project-description h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #fff;
+    color: white;
 }
 
 .project-description p {
@@ -90,7 +148,6 @@ nav ul li:nth-child(even) {
     line-height: 1.6;
 }
 
-/* Link styling */
 .project-description a {
     color: #00bfff;
     font-weight: bold;
@@ -99,20 +156,26 @@ nav ul li:nth-child(even) {
 
 .project-description a:hover {
     color: #1ecfff;
-    text-decoration: underline;
 }
 
-/* Hamburger icon */
+/* =================================
+   HAMBURGER MENU
+================================= */
+
 .showNav {
     height: 0.8em;
     width: 1.25em;
-    display: none; /* hidden on desktop */
+    display: none;
+
     border-top: 0.2em solid white;
     border-bottom: 0.2em solid white;
+
     border-radius: 0.2em;
+
     position: fixed;
     top: 15px;
     left: 15px;
+
     z-index: 1000;
 }
 
@@ -121,69 +184,130 @@ nav ul li:nth-child(even) {
     position: absolute;
     width: 1em;
     margin: 0.3em 0 0 -0.5em;
-    border-top: 0.2em solid #fff;
+    border-top: 0.2em solid white;
 }
 
-/* Hamburger visible only in mobile */
+/* =================================
+   MOBILE NAVIGATION
+================================= */
+
 @media (max-width: 768px) {
+
     .showNav {
         display: block;
     }
 
     nav {
-        display: none; /* hide menu initially */
+        display: none;
+
         position: fixed;
         top: 0;
         right: -40%;
+
         width: 40%;
         height: 100vh;
-        padding-top: 60px; /* leave space for hamburger */
+
+        padding-top: 60px;
+
         text-align: left;
-        flex-direction: column;
+
+        background-color: #2c2c2c;
     }
 
     nav ul {
         flex-direction: column;
         justify-content: flex-start;
-        padding: 0;
     }
 
     nav ul li {
-        display: block;
         margin: 0;
-        padding: 15px;
+        display: block;
     }
 
     #clicked .on {
-        display: block; /* hamburger visible */
+        display: block;
     }
 
     #clicked .off {
-        display: none; /* X hidden initially */
+        display: none;
     }
 
     #clicked:target nav {
         display: block;
-        right: 0; /* slide sidebar into view */
+        right: 0;
     }
 
     #clicked:target .on {
-        display: none; /* hide hamburger when sidebar open */
+        display: none;
     }
 
     #clicked:target .off {
-        display: block; /* show X when sidebar open */
-        border-top: none;
-        border-bottom: none;
+        display: block;
+
+        border: none;
+
         font-size: 1.4em;
+
         color: white;
+
+        position: fixed;
         top: 15px;
         left: 15px;
-        position: fixed;
+
         z-index: 1001;
     }
 
     #clicked:target .off::before {
-        border-top: none; /* remove middle line for X */
+        border-top: none;
     }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 25px;
+}
+
+/* social icons */
+
+footer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin: 0 10px;
+
+    border-radius: 50%;
+
+    background-color: #2c2c2c;
+
+    color: white;
+
+    font-size: 1.4rem;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    background-color: #00bfff;
+
+    color: black;
+
+    transform: scale(1.2);
+
+    box-shadow: 0 0 10px #00bfff;
 }
