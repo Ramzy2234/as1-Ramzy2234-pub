@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Report</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">My Portfolio</div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="report.html">Report</a></li>
+            <li><a href="video.html">Video</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <h1>Reflection of Module Experience</h1>
+
+    <section>
+        <p>
+            Throughout this module, I developed my understanding of HTML, CSS and the basics of web development. At the start, I found it difficult to understand how different parts of a website work together, especially layout and styling. However, after completing weekly exercises and building this assignment, my confidence improved significantly.
+        </p>
+
+        <p>
+            One of the biggest challenges I faced was debugging my code. Small mistakes such as missing tags or incorrect CSS would break parts of my website, which was frustrating. Over time, I learned how to fix these issues using validators and browser tools. This helped me improve my problem-solving skills and understand how websites are built more clearly.
+        </p>
+    </section>
+
+    <section>
+        <h2>Design Decisions</h2>
+
+        <p>
+            I chose a dark theme with blue highlights to create a modern and clean design. The blue colour is used for headings and important elements so they stand out. I used the Segoe UI font because it is simple, readable and works well across different devices.
+        </p>
+
+        <p>
+            My design was influenced by modern portfolio websites such as 
+            <a href="https://dribbble.com" target="_blank">Dribbble</a> and 
+            <a href="https://www.awwwards.com" target="_blank">Awwwards</a>. 
+            I also used the grid layout exercises from class as a base for structuring my pages.
+        </p>
+
+        <p>
+            I used CSS Grid and Flexbox to organise content and ensure the layout is responsive. The navigation bar is consistent across all pages, making it easy to move through the site.
+        </p>
+    </section>
+
+    <section>
+        <h2>Technical Development</h2>
+
+        <p>
+            The website was built using HTML5 and CSS3. I used semantic elements such as &lt;nav&gt;, &lt;main&gt; and &lt;section&gt; to structure the content correctly. A single CSS file (main.css) was used to maintain consistency across all pages.
+        </p>
+
+        <p>
+            Media queries were added to make the website responsive, and a hamburger menu was implemented for mobile devices. This ensures that the navigation works properly on smaller screens.
+        </p>
+    </section>
+
+    <section>
+        <h2>Validation Screenshots</h2>
+
+        <p>
+            Below are validation screenshots showing that all HTML and CSS files were tested using W3C validators and contain no errors.
+        </p>
+
+        <div class="grid">
+
+            <div>
+                <h3>Index.html</h3>
+                <img src="index-validation.png" alt="Index validation">
+            </div>
+
+            <div>
+                <h3>Project.html</h3>
+                <img src="project-validation.png" alt="Project validation">
+            </div>
+
+            <div>
+                <h3>Contact.html</h3>
+                <img src="contact-validation.png" alt="Contact validation">
+            </div>
+
+            <div>
+                <h3>Report.html</h3>
+                <img src="report-validation.png" alt="Report validation">
+            </div>
+
+            <div>
+                <h3>Video.html</h3>
+                <img src="video-validation.png" alt="Video validation">
+            </div>
+
+            <div>
+                <h3>Main.css</h3>
+                <img src="main-css-validation.png" alt="Main CSS validation">
+            </div>
+
+            <div>
+                <h3>Desktop.css</h3>
+                <img src="desktop-css-validation.png" alt="Desktop CSS validation">
+            </div>
+
+            <div>
+                <h3>Mobile.css</h3>
+                <img src="mobile-css-validation.png" alt="Mobile CSS validation">
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Video Demonstration</h2>
+
+        <p>
+            The video demonstration of my website can be viewed using the link below. The video explains the structure, features and design decisions made during development.
+        </p>
+
+        <p>
+            <a href="https://mymedia.northampton.ac.uk/embed/secure/iframe/entryId/0_4dmed2oj" target="_blank">
+                Watch Video Demo
+            </a>
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 My Portfolio</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
