@@ -1,6 +1,4 @@
-/* ==============================
-   BASIC LAYOUT & BODY
-================================= */
+/* B&B (BASIC AND BODY AREA)*/
 
 body {
     margin: 0;
@@ -23,9 +21,7 @@ body {
     }
 }
 
-/* ==============================
-   HEADER
-================================= */
+/* (HEAD) */
 
 header {
     text-align: center;
@@ -44,9 +40,7 @@ header p {
     margin-top: 10px;
 }
 
-/* ==============================
-   NAVIGATION
-================================= */
+/* (NAVS) */
 
 nav {
     background-color: #222;
@@ -80,9 +74,7 @@ nav ul li a.active {
     background-color: #ff6f61;
 }
 
-/* ==============================
-   MAIN / PROJECT SECTION
-================================= */
+/* (PROJECT SECTION) */
 
 main {
     padding: 40px 20px;
@@ -95,9 +87,7 @@ main h2 {
     color: #222;
 }
 
-/* ==============================
-   PROJECT GRID
-================================= */
+/* (GRIDDY) */
 
 .projects {
     display: grid;
@@ -107,9 +97,6 @@ main h2 {
     margin: auto;
 }
 
-/* ==============================
-   PROJECT CARD
-================================= */
 
 .project-item {
     background: rgba(255, 255, 255, 0.9);
@@ -153,9 +140,6 @@ main h2 {
     color: #e55b50;
 }
 
-/* ==============================
-   FOOTER
-================================= */
 
 footer {
     text-align: center;
@@ -166,9 +150,7 @@ footer {
     font-size: 0.9em;
 }
 
-/* ==============================
-   RESPONSIVE
-================================= */
+/* (RESPONSE */
 
 @media (max-width: 768px) {
     header h1 {

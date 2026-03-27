@@ -1,11 +1,11 @@
-/* Base body and font */
+/* Base body additionally with font */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
 
-    /* Grid layout */
+    /* Grid area */
     display: grid;
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: auto;
@@ -19,7 +19,7 @@ body {
     color: white;
 }
 
-/* Header */
+/* HEAD */
 header {
     background-color: #333;
     color: white;
@@ -27,7 +27,7 @@ header {
     grid-area: header;
 }
 
-/* Navigation */
+/* NAVS */
 nav {
     background-color: #ADB6C4;
     grid-area: nav;
@@ -53,7 +53,7 @@ nav a {
     font-weight: bold;
 }
 
-/* Main content */
+/* (PROPER CONTENT HERE) */
 main {
     grid-area: main;
     padding: 20px;
@@ -61,14 +61,14 @@ main {
     margin: auto;
 }
 
-/* Aside (optional sidebar) */
+/* SIDEBAR TING HERE*/
 aside {
     background-color: lightgreen;
     grid-area: aside;
     padding: 15px;
 }
 
-/* Footer */
+/* (FOOT) */
 footer {
     background-color: #ADB6C4;
     color: white;
@@ -76,7 +76,7 @@ footer {
     grid-area: footer;
 }
 
-/* Sections */
+
 section {
     max-width: 600px;
     margin: auto;
