@@ -5,61 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eyram's Portfolio</title>
-
     <link rel="stylesheet" href="main.css">
-
-    <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 0;
-        padding: 20px;
-    }
-
-    header {
-        background: #333;
-        color: white;
-        padding: 20px;
-    }
-
-    nav {
-        margin: 20px 0;
-    }
-
-    nav ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    nav ul li {
-        display: inline;
-        margin: 0 15px;
-    }
-
-    nav a {
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-    }
-
-    section {
-        max-width: 600px;
-        margin: auto;
-    }
-</style>
 
 <body id="clicked">
-    <header>
-        <a href="#clicked" class="on showNav"></a>
-        <a href="#" class="off showNav">X</a>
 
+    <!-- HAMBURGER ICON (mobile only) -->
+    <a href="#clicked" class="showNav on">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
+
+    <!-- CLOSE ICON (appears when menu open) -->
+    <a href="#" class="showNav off">&times;</a>
+
+    <header>
         <h1>Hi, it's Eyram</h1>
-        <p>Welcome to my page, nice to meet you. Have a look around at my portfolio and get to know more bout me. Hope
-            you enjoy it!!!</p>
+        <p>Welcome to my page, nice to meet you. Have a look around at my portfolio and get to know more about me. Hope you enjoy it!</p>
     </header>
+
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -69,35 +35,17 @@
             <li><a href="sitereport.html">Site Report</a></li>
         </ul>
     </nav>
+
     <main>
-        <section>
-            <h2>About Me</h2>
-            <p>Hello, I'm Eyram, a driven and interested Computer Network Engineering (BSc) student at the University of
-                Northampton. I've always been interested by technology, and I'm eager to discover how systems interact
-                and communicate in the digital domain.Along with my education, I've earned experience in hospitality,
-                youth work, and logistics, which has helped me become adaptive, professional, and a good communicator.
-
-                In my leisure time, I like working on personal technological projects, where I study coding and
-                cybersecurity. I'm currently looking for further experience in computer network engineering, and I'm
-                interested in internships where I can use what I'm learning, expand my skill set, and work on real-world
-                projects.Outside of technology, I'm an avid sports enthusiast, particularly football, which has affected
-                my perspective on collaboration, discipline, and perseverance. I am excited to continue studying and
-                take the next step towards a career in information technology and networking.</p>
-        </section>
+        <!-- page content -->
     </main>
+
     <footer>
-        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-
-        <a href="https://github.com/Ramzy2234" target="_blank">
-            <i class="fa-brands fa-github"></i>
-        </a>
-
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-
-        <a href="mailto:eyram05@email.com">
-            <i class="fa-solid fa-envelope"></i>
-        </a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Ramzy2234" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:eyram05@email.com"><i class="fas fa-envelope"></i></a>
     </footer>
-</body>
 
+</body>
 </html>

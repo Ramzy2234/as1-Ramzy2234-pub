@@ -1,18 +1,10 @@
-/* Base dark background and light text */
+/* ===== BASE STYLES ===== */
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
     color: #e0e0e0;
-
-    background: linear-gradient(
-        -45deg,
-        #1e1e1e,
-        #1a1f2b,
-        #162235,
-        #1e1e1e
-    );
-
+    background: linear-gradient(-45deg, #1e1e1e, #1a1f2b, #162235, #1e1e1e);
     background-size: 400% 400%;
     animation: gradientMove 12s ease infinite;
 }
@@ -23,59 +15,29 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-a {
-    transition: all 0.3s ease;
-}
+a { transition: all 0.3s ease; }
+img { max-width: 100%; height: auto; }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* =================================
-   PAGE LAYOUT
-================================= */
-
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 2rem;
-}
-
-section {
-    margin-bottom: 3rem;
-}
-
-/* =================================
-   HEADER / HERO SECTION
-================================= */
+main { max-width: 1100px; margin: auto; padding: 2rem; }
+section { margin-bottom: 3rem; }
 
 header {
     background-color: #111;
     color: white;
     text-align: center;
     padding: 2rem 1rem;
+    position: relative;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
+header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+header p { max-width: 700px; margin: auto; color: #ccc; }
 
-header p {
-    max-width: 700px;
-    margin: auto;
-    color: #ccc;
-}
-
-/* =================================
-   NAVIGATION
-================================= */
-
+/* ===== NAVIGATION ===== */
 nav {
     background-color: #2c2c2c;
-    padding: 0.75rem;
+    padding: 0.75rem 0;
     text-align: center;
+    transition: right 0.3s ease;
 }
 
 nav ul {
@@ -102,33 +64,19 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* alternating nav colours */
+nav ul li:nth-child(odd) { background-color: #242424; }
+nav ul li:nth-child(even) { background-color: #2f2f2f; }
 
-nav ul li:nth-child(odd) {
-    background-color: #242424;
-}
-
-nav ul li:nth-child(even) {
-    background-color: #2f2f2f;
-}
-
-/* =================================
-   PROJECT SECTION
-================================= */
-
+/* ===== PROJECTS ===== */
 .project-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: center;
-
     background-color: rgba(42,42,42,0.95);
-
     margin: 2rem 0;
     padding: 2rem;
-
     border-radius: 10px;
-
     box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
@@ -137,177 +85,93 @@ nav ul li:nth-child(even) {
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
-.project-description h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: white;
-}
+.project-description h3 { font-size: 1.8rem; margin-bottom: 1rem; color: white; }
+.project-description p { font-size: 1.1rem; line-height: 1.6; }
+.project-description a { color: #00bfff; font-weight: bold; text-decoration: none; }
+.project-description a:hover { color: #1ecfff; }
 
-.project-description p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.project-description a {
-    color: #00bfff;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.project-description a:hover {
-    color: #1ecfff;
-}
-
-/* =================================
-   HAMBURGER MENU
-================================= */
-
-.showNav {
-    height: 0.8em;
-    width: 1.25em;
-    display: none;
-
-    border-top: 0.2em solid white;
-    border-bottom: 0.2em solid white;
-
-    border-radius: 0.2em;
-
-    position: fixed;
-    top: 15px;
-    left: 15px;
-
-    z-index: 1000;
-}
-
-.showNav::before {
-    content: '';
-    position: absolute;
-    width: 1em;
-    margin: 0.3em 0 0 -0.5em;
-    border-top: 0.2em solid white;
-}
-
-/* =================================
-   MOBILE NAVIGATION
-================================= */
-
-@media (max-width: 768px) {
-
-    .showNav {
-        display: block;
-    }
-
-    nav {
-        display: none;
-
-        position: fixed;
-        top: 0;
-        right: -40%;
-
-        width: 40%;
-        height: 100vh;
-
-        padding-top: 60px;
-
-        text-align: left;
-
-        background-color: #2c2c2c;
-    }
-
-    nav ul {
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    nav ul li {
-        margin: 0;
-        display: block;
-    }
-
-    #clicked .on {
-        display: block;
-    }
-
-    #clicked .off {
-        display: none;
-    }
-
-    #clicked:target nav {
-        display: block;
-        right: 0;
-    }
-
-    #clicked:target .on {
-        display: none;
-    }
-
-    #clicked:target .off {
-        display: block;
-
-        border: none;
-
-        font-size: 1.4em;
-
-        color: white;
-
-        position: fixed;
-        top: 15px;
-        left: 15px;
-
-        z-index: 1001;
-    }
-
-    #clicked:target .off::before {
-        border-top: none;
-    }
-
-    .project-container {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-/* =================================
-   FOOTER
-================================= */
-
+/* ===== FOOTER ===== */
 footer {
     background-color: #111;
     text-align: center;
     padding: 25px;
 }
 
-/* social icons */
-
 footer a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
     width: 48px;
     height: 48px;
-
     margin: 0 10px;
-
     border-radius: 50%;
-
     background-color: #2c2c2c;
-
     color: white;
-
     font-size: 1.4rem;
-
     text-decoration: none;
-
     transition: all 0.3s ease;
 }
 
 footer a:hover {
     background-color: #00bfff;
-
     color: black;
-
     transform: scale(1.2);
-
     box-shadow: 0 0 10px #00bfff;
+}
+
+/* ===== HAMBURGER MENU ===== */
+.showNav {
+    display: none; /* hidden desktop */
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.showNav .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+}
+
+.showNav.off { display: none; }
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .showNav.on { display: block; }
+
+    nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        height: 100vh;
+        padding-top: 60px;
+        background-color: #2c2c2c;
+        flex-direction: column;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    nav ul { flex-direction: column; display: flex; justify-content: flex-start; padding: 0; margin: 0; }
+
+    nav ul li { list-style: none; display: block; padding: 15px; }
+    nav ul li a { color: #ccc; text-decoration: none; font-weight: bold; }
+    nav ul li a:hover { color: #00bfff; text-decoration: underline; }
+
+    /* Show nav when hamburger clicked */
+    #clicked:target nav { display: flex; right: 0; }
+
+    /* Toggle hamburger / close icon */
+    #clicked:target .showNav.on { display: none; }
+    #clicked:target .showNav.off { display: block; }
+
+    /* Project grid on mobile */
+    .project-container { grid-template-columns: 1fr; }
 }
