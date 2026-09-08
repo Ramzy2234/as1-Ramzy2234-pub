@@ -1,1 +1,19 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Snack Man | Eyram Kokoti</title><link rel="stylesheet" href="style.css"></head><body><main class="game-shell"><header><h1>Snack Man</h1><p>Collect the points, avoid the enemy and complete the maze.</p></header><section class="game-ui"><button id="startBtn" type="button">Start Game</button><p>Score: <span id="score">0</span></p><p id="message" role="status" aria-live="polite"></p></section><div id="maze" class="maze" aria-label="Snack Man maze"></div><div class="game-actions"><a href="../project.html">← Back to projects</a><button id="restartBtn" type="button" hidden>Restart</button></div></main><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Snack Man | Eyram Kokoti</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="game-shell">
+<header><div class="badge">ARCADE MODE</div><h1>🍿 SNACK MAN</h1><p>Clear the maze, build your combo and survive all 5 rounds.</p></header>
+<section class="hud">
+<div><span>Score</span><strong id="score">0</strong></div><div><span>Round</span><strong id="round">1 / 5</strong></div><div><span>Lives</span><strong id="lives">❤️❤️❤️</strong></div><div><span>Combo</span><strong id="combo">x1</strong></div>
+</section>
+<section class="controls"><button id="startBtn">Start Game</button><button id="restartBtn" hidden>Restart</button><span id="message" role="status" aria-live="polite">Ready?</span></section>
+<div id="maze" class="maze" aria-label="Snack Man maze"></div>
+<div class="mobile-controls" aria-label="Touch controls"><button data-move="up">▲</button><div><button data-move="left">◀</button><button data-move="down">▼</button><button data-move="right">▶</button></div></div>
+<section class="leaderboard"><div class="section-heading"><h2>🏆 Hall of Fame</h2><button id="clearBoard" type="button">Clear scores</button></div><ol id="leaderboardList"><li>No scores yet — be the first!</li></ol></section>
+<div class="game-actions"><a href="../project.html">← Back to projects</a><a href="https://github.com/Ramzy2234/as1-Ramzy2234-pub/blob/master/browser-maze-game/script.js" target="_blank" rel="noopener">View source code ↗</a></div>
+</main><script src="script.js"></script>
+</body></html>
